@@ -322,31 +322,6 @@ export default function EventDetailPage() {
     ]
   };
 
-  // Reviews data - limited to 3 only
-  const reviews = [
-    {
-      name: "Sarah Putri",
-      rating: 5,
-      date: "2 minggu yang lalu",
-      comment: "Acara pernikahannya sangat berkesan! Vendor yang disediakan profesional dan sesuai budget. Highly recommended!",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face&auto=format"
-    },
-    {
-      name: "Andi Wijaya",
-      rating: 5,
-      date: "1 bulan yang lalu", 
-      comment: "Seminar yang sangat informatif. Venue dan catering berkualitas tinggi. Akan menggunakan lagi untuk acara selanjutnya.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&auto=format"
-    },
-    {
-      name: "Maya Sari",
-      rating: 4,
-      date: "3 minggu yang lalu",
-      comment: "Gathering komunitas berjalan lancar. Ada sedikit kendala teknis di awal tapi segera teratasi. Overall puas!",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face&auto=format"
-    }
-  ];
-
   // Budget estimation
   const budgetEstimation = [
     { category: "Wedding Organizer", price: "15 - 50 jt" },
