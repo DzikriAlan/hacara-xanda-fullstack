@@ -2,10 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Search, ChevronDown, ArrowRight, MapPin, Calendar, Star, Heart, Users, Moon, Sun, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, ChevronDown, ArrowRight, MapPin, Calendar, Star, Users, Moon, Sun, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +13,6 @@ export default function HomePage() {
 
   // Refs for sliders
   const popularEventsSliderRef = useRef<HTMLDivElement>(null);
-  const weddingVendorsSliderRef = useRef<HTMLDivElement>(null);
   const seminarsSliderRef = useRef<HTMLDivElement>(null);
   const gatheringEventsSliderRef = useRef<HTMLDivElement>(null);
 
@@ -40,64 +38,6 @@ export default function HomePage() {
       subtitle: "Dari planning hingga eksekusi, semua dalam satu platform",
       cta: "Pelajari Lebih Lanjut",
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&h=1080&fit=crop&auto=format"
-    }
-  ];
-
-  // Popular events data - Added 6th item
-  const popularEvents = [
-    {
-      id: 1,
-      title: "Tech Conference 2025: Innovation Summit",
-      location: "Jakarta Convention Center",
-      date: "15 Nov 2025",
-      price: "Rp 850.000",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=250&fit=crop&auto=format",
-      rating: 4.8
-    },
-    {
-      id: 2,
-      title: "Wedding Expo Jakarta 2025",
-      location: "JCC Senayan",
-      date: "20 Nov 2025", 
-      price: "Gratis",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=250&fit=crop&auto=format",
-      rating: 4.9
-    },
-    {
-      id: 3,
-      title: "Startup Pitch Night Vol.12",
-      location: "Co-working Space Kemang",
-      date: "17 Nov 2025",
-      price: "Rp 150.000",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=250&fit=crop&auto=format",
-      rating: 4.7
-    },
-    {
-      id: 4,
-      title: "Music Festival: Nusantara Beats",
-      location: "Ancol Beach City",
-      date: "23 Nov 2025",
-      price: "Rp 350.000",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop&auto=format",
-      rating: 4.6
-    },
-    {
-      id: 5,
-      title: "Food & Culinary Festival 2025",
-      location: "BSD Green Office Park",
-      date: "27 Nov 2025", 
-      price: "Rp 75.000",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=250&fit=crop&auto=format",
-      rating: 4.5
-    },
-    {
-      id: 6,
-      title: "Art & Design Exhibition",
-      location: "National Gallery Indonesia",
-      date: "30 Nov 2025",
-      price: "Rp 50.000",
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=250&fit=crop&auto=format",
-      rating: 4.4
     }
   ];
 
