@@ -1,0 +1,447 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Line clamp utilities */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Monochrome theme color utilities */
+  .bg-super-black {
+    background-color: #0B0B0B;
+  }
+  
+  .bg-surface {
+    background-color: #121212;
+  }
+  
+  .bg-primary-white {
+    background-color: #FFFFFF;
+  }
+  
+  .bg-secondary-light {
+    background-color: #E5E5E5;
+  }
+  
+  .bg-border-subtle {
+    background-color: #2A2A2A;
+  }
+  
+  .text-primary-white {
+    color: #FFFFFF;
+  }
+  
+  .text-secondary-gray {
+    color: #BFBFBF;
+  }
+  
+  .border-subtle {
+    border-color: #2A2A2A;
+  }
+  
+  /* CTA Button gradient - white to light gray */
+  .bg-cta-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #D1D1D1 100%);
+  }
+  
+  .hover\:bg-cta-gradient-hover:hover {
+    background: linear-gradient(135deg, #F5F5F5 0%, #C0C0C0 100%);
+  }
+  
+  /* Hover/Focus effect */
+  .hover\:bg-hover-effect:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Monochrome gradients */
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #0B0B0B 0%, #121212 50%, #0B0B0B 100%);
+  }
+  
+  .bg-section-gradient {
+    background: linear-gradient(180deg, #0B0B0B 0%, #121212 100%);
+  }
+  
+  /* Grid pattern for background */
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+  
+  /* Smooth scroll untuk semua elemen */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom glow effects - monochrome */
+  .glow-white {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .glow-white-strong {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  }
+  
+  .glow-subtle {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+  }
+  
+  .glow-neon {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Font utilities */
+  .font-heading {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .font-body {
+    font-family: var(--font-poppins), var(--font-inter), "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+
+  /* Apply Roboto to all HTML heading elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+  }
+
+  h1 {
+    font-weight: 700 !important;
+  }
+
+  h2 {
+    font-weight: 700 !important;
+  }
+
+  h3 {
+    font-weight: 600 !important;
+  }
+
+  h4, h5, h6 {
+    font-weight: 600 !important;
+  }
+  
+  /* Heading size utilities */
+  .heading-1 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 3.75rem !important; /* 60px */
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .heading-2 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 3rem !important; /* 48px */
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .heading-3 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 2.25rem !important; /* 36px */
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .heading-4 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.875rem !important; /* 30px */
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .heading-5 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.5rem !important; /* 24px */
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  .heading-6 {
+    font-family: var(--font-roboto), "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.25rem !important; /* 20px */
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.025em !important;
+  }
+  
+  /* Custom animations for monochrome theme */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fade-in-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  @keyframes fade-in-left {
+    from { 
+      opacity: 0; 
+      transform: translateX(-50px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateX(0); 
+    }
+  }
+  
+  @keyframes fade-in-right {
+    from { 
+      opacity: 0; 
+      transform: translateX(50px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateX(0); 
+    }
+  }
+  
+  @keyframes pulse-minimal {
+    0%, 100% { opacity: 0.02; transform: scale(1); }
+    50% { opacity: 0.08; transform: scale(1.05); }
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 0.05; transform: scale(1.05); }
+    50% { opacity: 0.02; transform: scale(1); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+    50% { 
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+    }
+  }
+  
+  @keyframes bounce-minimal {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-left {
+    animation: fade-in-left 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-right {
+    animation: fade-in-right 0.8s ease-out forwards;
+  }
+  
+  .animate-pulse-minimal {
+    animation: pulse-minimal 8s ease-in-out infinite;
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 10s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  
+  .animate-bounce-minimal {
+    animation: bounce-minimal 2s ease-in-out infinite;
+  }
+  
+  /* Legacy animation names for compatibility */
+  .animate-pulse-slow {
+    animation: pulse-minimal 8s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slower {
+    animation: pulse-subtle 10s ease-in-out infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-minimal 2s ease-in-out infinite;
+  }
+  
+  /* Force font application for motion components */
+  div.heading-1, div.heading-2, div.heading-3, div.heading-4, div.heading-5, div.heading-6,
+  .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6,
+  [class*="heading-"] {
+    font-family: var(--font-roboto), sans-serif;
+  }
+  
+  /* Responsive heading utilities */
+  @media (max-width: 768px) {
+    .heading-1 {
+      font-size: 2.5rem !important; /* 40px on mobile */
+    }
+    
+    .heading-2 {
+      font-size: 2rem !important; /* 32px on mobile */
+    }
+    
+    .heading-3 {
+      font-size: 1.75rem !important; /* 28px on mobile */
+    }
+    
+    .heading-4 {
+      font-size: 1.5rem !important; /* 24px on mobile */
+    }
+  }
+}
+
+
+
+@layer base {
+  :root {
+    /* Monochrome theme - super clean and minimal */
+    --background: 0 0% 4%; /* #0B0B0B - super deep black */
+    --foreground: 0 0% 100%; /* #FFFFFF - text primary */
+    --card: 0 0% 7%; /* #121212 - surface/card */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
+    --popover: 0 0% 7%; /* #121212 */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary: 0 0% 100%; /* #FFFFFF - primary accent */
+    --primary-foreground: 0 0% 4%; /* #0B0B0B */
+    --secondary: 0 0% 90%; /* #E5E5E5 - secondary accent */
+    --secondary-foreground: 0 0% 4%; /* #0B0B0B */
+    --muted: 0 0% 7%; /* #121212 */
+    --muted-foreground: 0 0% 75%; /* #BFBFBF - text secondary */
+    --accent: 0 0% 100%; /* #FFFFFF */
+    --accent-foreground: 0 0% 4%; /* #0B0B0B */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 16%; /* #2A2A2A - border/subtle line */
+    --input: 0 0% 7%; /* #121212 */
+    --ring: 0 0% 100%; /* #FFFFFF */
+    --chart-1: 0 0% 100%; /* #FFFFFF */
+    --chart-2: 0 0% 90%; /* #E5E5E5 */
+    --chart-3: 0 0% 75%; /* #BFBFBF */
+    --chart-4: 0 0% 16%; /* #2A2A2A */
+    --chart-5: 0 0% 7%; /* #121212 */
+    --radius: 0.5rem;
+    
+    /* Custom monochrome theme colors */
+    --super-black: 0 0% 4%; /* #0B0B0B */
+    --surface: 0 0% 7%; /* #121212 */
+    --primary-white: 0 0% 100%; /* #FFFFFF */
+    --secondary-light: 0 0% 90%; /* #E5E5E5 */
+    --border-subtle: 0 0% 16%; /* #2A2A2A */
+    --text-primary: 0 0% 100%; /* #FFFFFF */
+    --text-secondary: 0 0% 75%; /* #BFBFBF */
+    --hover-effect: 0 0% 100% / 0.1; /* rgba(255,255,255,0.1) */
+  }
+  
+  .dark {
+    /* Dark theme - same as root since we're using monochrome */
+    --background: 0 0% 4%; /* #0B0B0B */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --card: 0 0% 7%; /* #121212 */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
+    --popover: 0 0% 7%; /* #121212 */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary: 0 0% 100%; /* #FFFFFF */
+    --primary-foreground: 0 0% 4%; /* #0B0B0B */
+    --secondary: 0 0% 90%; /* #E5E5E5 */
+    --secondary-foreground: 0 0% 4%; /* #0B0B0B */
+    --muted: 0 0% 7%; /* #121212 */
+    --muted-foreground: 0 0% 75%; /* #BFBFBF */
+    --accent: 0 0% 100%; /* #FFFFFF */
+    --accent-foreground: 0 0% 4%; /* #0B0B0B */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 16%; /* #2A2A2A */
+    --input: 0 0% 7%; /* #121212 */
+    --ring: 0 0% 100%; /* #FFFFFF */
+    --chart-1: 0 0% 100%; /* #FFFFFF */
+    --chart-2: 0 0% 90%; /* #E5E5E5 */
+    --chart-3: 0 0% 75%; /* #BFBFBF */
+    --chart-4: 0 0% 16%; /* #2A2A2A */
+    --chart-5: 0 0% 7%; /* #121212 */
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-poppins), var(--font-inter), "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* Apply Roboto font to all heading elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 500;
+  }
+
+  /* Optional: Different weights for different heading levels */
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  h4, h5, h6 {
+    font-weight: 400;
+  }
+  
+  /* Ensure proper font rendering */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Natural gradient utilities */
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-from), var(--tw-gradient-to));
+  }
+
+  /* Soft organic gradients */
+  .bg-organic-gradient {
+    background: 
+      radial-gradient(ellipse 800px 600px at 0% 0%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse 600px 400px at 100% 100%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  }
+
+  /* Enhanced hover effects for images */
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+}
